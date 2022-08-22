@@ -7,6 +7,8 @@
 </head>
 
 <div style="overflow:auto">
+
+	<p id="purchasedSince" style="font-size: 50px;"></p>
 <div class="phone">
 <img src="pixel6a.jpeg" style="width: 60%; height: 50%;" />
 <h2>Phone Cost Per Day (as of today) :</h2>
@@ -31,7 +33,7 @@
 let phonePrice = 360;
 let budsPrice = 99;
 
-//let purchaseDate = "July, 25 2022";
+let purchaseDate = "27th July 2022";
 let deliveryDate = Date.parse("July, 27 2022  16:27 GMT+0100 (Irish Standard Time)");
 let currentDate = new Date();
 console.log(currentDate);
@@ -43,9 +45,11 @@ console.log(numberOfDaysSinceDelivery);
 let phoneVOT = phonePrice/numberOfDaysSinceDelivery;
 let budsVOT =  budsPrice/numberOfDaysSinceDelivery;
 
-let phoneVOTMonthly = phonePrice/(30/numberOfDaysSinceDelivery);
-let budsVOTMonthly = budsPrice/(30/numberOfDaysSinceDelivery);
+let phoneVOTMonthly = phonePrice/(30/numberOfDaysSinceDelivery.toFixed());
+let budsVOTMonthly = budsPrice/(30/numberOfDaysSinceDelivery.toFixed());
 
+
+document.getElementById("purchasedSince").innerHTML = " <b>Purchased on: "+purchaseDate+ ", "+numberOfDaysSinceDelivery.toFixed()+" Days since purchase</b>";
 
 document.getElementById("phoneVOT").innerHTML = " <b>"+phoneVOT.toFixed(2)+" &euro;</b>";
 document.getElementById("budsVOT").innerHTML = " <b>"+budsVOT.toFixed(2)+" &euro; </b>";
