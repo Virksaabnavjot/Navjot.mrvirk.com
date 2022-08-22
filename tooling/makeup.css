@@ -1,0 +1,21 @@
+.phone {
+  width: 50%; 
+  height: 100%; 
+  float: left; 
+  background: white;
+}
+
+.buds{
+  margin-left: 50%; 
+  height: 100%; 
+  background: white;
+}
+
+
+@media only screen and (max-width:620px) {
+
+  /* For mobile phones: */
+  .phone, .buds {
+    width: 100%;
+  }
+}
