@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>Value Over Time Calculator</title>
+<meta name="theme-color" content="#FDCA4E">
+<link rel="icon" href="https://navjot.mrvirk.com/icon.png" />
+</head>
+
+<div style="width: 50%; height: 100%; float: left; background: white;">
+<img src="pixel6a.jpeg" style="width: 60%; height: 50%;" />
+<h2>Phone Cost Per Day (as of today) :</h2>
+<p id="phoneVOT" style="font-size: 80px;"></p>
+</div>
+
+<div style="margin-left: 50%; height: 100%; background: white;">
+<img src="buds.webp" style="width: 40%; height: 50%;" />
+<h2>Buds Cost Per Day (as of today) :</h2>
+<p id="budsVOT" style="font-size: 80px;"></p>
+</div>
+
+<script type = "text/javascript">
+let phonePrice = 360;
+let budsPrice = 99;
+
+//let purchaseDate = "July, 25 2022";
+let deliveryDate = Date.parse("July, 27 2022  16:27 GMT+0100 (Irish Standard Time)");
+let currentDate = new Date();
+console.log(currentDate);
+
+let numberOfDaysSinceDelivery = (currentDate.getTime() - deliveryDate)/ (1000 * 3600 * 24);
+console.log(deliveryDate);
+console.log(numberOfDaysSinceDelivery);
+
+let phoneVOT = phonePrice/numberOfDaysSinceDelivery;
+let budsVOT =  budsPrice/numberOfDaysSinceDelivery;
+
+document.getElementById("phoneVOT").innerHTML = " <b>"+phoneVOT.toFixed(2)+" €</b>";
+document.getElementById("budsVOT").innerHTML = " <b>"+budsVOT.toFixed(2)+" € </b>";
+
+
+</script>
+
+
+
+</script>
+</html>
