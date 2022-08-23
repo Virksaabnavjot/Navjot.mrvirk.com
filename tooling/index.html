@@ -25,8 +25,15 @@ document.getElementById("purchasedSince").innerHTML = " <b>Purchased on: "+purch
 document.getElementById("phoneVOT").innerHTML = " <b>"+phoneVOT.toFixed(5)+" &euro;</b>";
 document.getElementById("budsVOT").innerHTML = " <b>"+budsVOT.toFixed(5)+" &euro; </b>";
 
+if(numberOfDaysSinceDelivery.toFixed() < 30){
+document.getElementById("phoneVOTMonthly").innerHTML = " <b>"+phonePrice+" &euro;</b>";
+document.getElementById("budsVOTMonthly").innerHTML = " <b>"+budsPrice+" &euro; </b>";
+}
+else{
 document.getElementById("phoneVOTMonthly").innerHTML = " <b>"+phoneVOTMonthly.toFixed(2)+" &euro;</b>";
 document.getElementById("budsVOTMonthly").innerHTML = " <b>"+budsVOTMonthly.toFixed(2)+" &euro; </b>";
+}
+
 setTimeout("updateData()",1000)
 }
 
