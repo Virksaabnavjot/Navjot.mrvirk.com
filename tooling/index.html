@@ -19,8 +19,8 @@ let numberOfDaysSinceDelivery = (currentDate.getTime() - deliveryDate)/ (1000 * 
 let phoneVOT = phonePrice/numberOfDaysSinceDelivery;
 let budsVOT =  budsPrice/numberOfDaysSinceDelivery;
 
-let phoneVOTMonthly = phonePrice/(30/numberOfDaysSinceDelivery.toFixed());
-let budsVOTMonthly = budsPrice/(30/numberOfDaysSinceDelivery.toFixed());
+let phoneVOTMonthly = phonePrice/(numberOfDaysSinceDelivery.toFixed()/30);
+let budsVOTMonthly = budsPrice/(numberOfDaysSinceDelivery.toFixed()/30);
 document.getElementById("purchasedSince").innerHTML = " <b>Purchased on: "+purchaseDate+ ", "+numberOfDaysSinceDelivery.toFixed()+" Days since purchase</b>";
 document.getElementById("phoneVOT").innerHTML = " <b>"+phoneVOT.toFixed(5)+" &euro;</b>";
 document.getElementById("budsVOT").innerHTML = " <b>"+budsVOT.toFixed(5)+" &euro; </b>";
