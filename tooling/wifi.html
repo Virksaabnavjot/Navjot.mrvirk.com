@@ -5,7 +5,7 @@
 <link rel="icon" href="https://navjot.mrvirk.com/icon.png" />
 <link href="makeup.css" rel="stylesheet" type="text/css">
 <script type = "text/javascript">
-let phonePrice = 360;
+let phonePrice = 80.95;
 let budsPrice = 99;
 
 let purchaseDate = "22nd Jan 2023";
@@ -23,15 +23,15 @@ let phoneVOTMonthly = phonePrice/(numberOfDaysSinceDelivery.toFixed()/30);
 let budsVOTMonthly = budsPrice/(numberOfDaysSinceDelivery.toFixed()/30);
 document.getElementById("purchasedSince").innerHTML = " <b>Purchased on: "+purchaseDate+ ", "+numberOfDaysSinceDelivery.toFixed()+" Days since purchase</b>";
 document.getElementById("phoneVOT").innerHTML = " <b>"+phoneVOT.toFixed(5)+" &euro;</b>";
-document.getElementById("budsVOT").innerHTML = " <b>"+budsVOT.toFixed(5)+" &euro; </b>";
+//document.getElementById("budsVOT").innerHTML = " <b>"+budsVOT.toFixed(5)+" &euro; </b>";
 
 if(numberOfDaysSinceDelivery.toFixed() < 30){
 document.getElementById("phoneVOTMonthly").innerHTML = " <b>"+phonePrice+" &euro;</b>";
-document.getElementById("budsVOTMonthly").innerHTML = " <b>"+budsPrice+" &euro; </b>";
+//document.getElementById("budsVOTMonthly").innerHTML = " <b>"+budsPrice+" &euro; </b>";
 }
 else{
 document.getElementById("phoneVOTMonthly").innerHTML = " <b>"+phoneVOTMonthly.toFixed(2)+" &euro;</b>";
-document.getElementById("budsVOTMonthly").innerHTML = " <b>"+budsVOTMonthly.toFixed(2)+" &euro; </b>";
+//document.getElementById("budsVOTMonthly").innerHTML = " <b>"+budsVOTMonthly.toFixed(2)+" &euro; </b>";
 }
 
 setTimeout("updateData()",1000)
@@ -45,14 +45,15 @@ setTimeout("updateData()",1000)
 
 <p id="purchasedSince" style="font-size: 50px;"></p>
 <div class="phone">
-<img src="pixel6a.jpeg" style="width: 70%; height: 20%;" class="imgCenter" />
-<h2>Phone Cost Per Day (as of today) :</h2>
+<!--img src="pixel6a.jpeg" style="width: 70%; height: 20%;" class="imgCenter" / -->
+<h2>Cost Per Day (as of today) :</h2>
 <p id="phoneVOT" style="font-size: 80px;"></p>
 
-<h2>Phone Cost Per Month (as of today) :</h2>
+<h2>Wifi Router Cost Per Month (as of today) :</h2>
 <p id="phoneVOTMonthly" style="font-size: 80px;"></p>
 </div>
 
+<!--
 <div class="buds">
 <img src="buds.webp" style="width: 60%; height: 20%;" class="imgCenter" />
 <h2>Buds Cost Per Day (as of today) :</h2>
@@ -61,7 +62,7 @@ setTimeout("updateData()",1000)
 <h2>Buds Cost Per Month (as of today) :</h2>
 <p id="budsVOTMonthly" style="font-size: 80px;"></p>
 </div>
-
+-->
 <a href="https://github.com/Virksaabnavjot/Navjot.mrvirk.com/tree/main/tooling">Project code: here </a>
 </div>
 
